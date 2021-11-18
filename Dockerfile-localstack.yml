@@ -1,0 +1,4 @@
+FROM localstack/localstack
+
+ADD ./docker/localstack/ /localstack_files
+ADD ./docker/localstack/init /docker-entrypoint.initaws.d

@@ -1,0 +1,28 @@
+version: '2.1'
+services:
+  localstack:
+    build:
+      context: ./
+      dockerfile: Dockerfile-localstack.yml
+    ports:
+      - "4566-4599:4566-4599"
+    environment:
+      - SERVICES=serverless
+      - LAMBDA_EXECUTOR=docker
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - APPLICATION_ENV=dev
+    volumes:
+      - ./docker/localstack:/localstack_files
+      - ~/.aws:/root/.aws
+      - ./docker/localstack/init:/docker-entrypoint-initaws.d
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    extra_hosts:
+      terraform-dev.localstack: 127.0.0.1
+  dynamodb_admin:
+    image: aaronshaf/dynamodb-admin
+    ports:
+      - "4501:8001"
+    environment:
+      - DYNAMO_ENDPOINT=http://localstack:4566
+    depends_on:
+      - localstack
