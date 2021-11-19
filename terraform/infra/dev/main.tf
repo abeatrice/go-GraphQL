@@ -9,3 +9,7 @@ module "dynamodb" {
   env = var.env
   tags = local.tags
 }
+
+module "function" {
+  source = "../../modules/function"
+}

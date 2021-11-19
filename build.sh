@@ -3,7 +3,7 @@
 echo "building main.go"
 GOOS=linux go build main.go
 
-echo "zipping function.zip from main"
-zip function.zip main
+echo "zipping main.zip from main"
+zip main.zip main
 
 echo "done"
