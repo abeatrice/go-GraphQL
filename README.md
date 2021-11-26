@@ -17,6 +17,4 @@ $ make apply
 ```
 
 ### todo
- - [create_lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_integration)
- - lambda.tf zip can not find source file to make main.zip, possible that root dir not included in make tf commands because of -chdir=infra/dev
- 
+ - use local enpoints for terraform backend to point to localstack.

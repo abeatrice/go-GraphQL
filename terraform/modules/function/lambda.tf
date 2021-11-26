@@ -16,7 +16,7 @@ resource "aws_lambda_permission" "apigw_lambda" {
 }
 
 resource "aws_lambda_function" "lambda" {
-  filename = "function.zip"
+  filename = "main.zip"
   function_name = "graphql"
   role = aws_iam_role.role.arn
   handler = "main"

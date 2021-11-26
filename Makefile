@@ -9,10 +9,10 @@ ARGS = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 
 TERRAFORM := docker run -it \
 		--network="host" \
-		-v `pwd`/terraform:/app/ \
+		-v `pwd`:/app/ \
 		-v ~/.aws:/root/.aws \
 		--user $(id -u):$(id -g) \
-		-w /app hashicorp/terraform:1.0.0 -chdir=infra/dev
+		-w /app hashicorp/terraform:1.0.0 -chdir=terraform/infra/dev
 
 .PHONY: build
 build: ## Build the app
