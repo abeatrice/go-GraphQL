@@ -14,26 +14,12 @@ $ make run
 # while the app is running, create the aws resources
 $ make init
 $ make apply
+
+# invoke the lambda function locally
+$ make invoke ARGS="events/event.json"
 ```
 
 ### todo
  - ./build.sh build main before zip for lambda
- - set up make invoke to use events/event.json
+ - fix make invoke events/event.json creates json error
  - use local enpoints for terraform backend to point to localstack.
- - attach AWSLambdaBasicExecutionRole to lambda
- ```
-    {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "logs:CreateLogGroup",
-                    "logs:CreateLogStream",
-                    "logs:PutLogEvents"
-                ],
-                "Resource": "*"
-            }
-        ]
-    }
-```
