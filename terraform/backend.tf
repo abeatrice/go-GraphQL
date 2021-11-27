@@ -7,5 +7,6 @@ provider "aws" {
   #   kinesis  = "http://localhost:4566"
   #   apigateway = "http://localhost:4566"
   #   iam = "http://localhost:4566"
+  #   cloudwatch = "http://localhost:4566"
   # }
 }

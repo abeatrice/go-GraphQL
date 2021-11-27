@@ -2,7 +2,7 @@ data "aws_caller_identity" "current" {}
 
 data "archive_file" "zip" {
   type        = "zip"
-  source_file = "../../../main"
+  source_file = "../main"
   output_path = "main.zip"
 }
 

@@ -12,7 +12,7 @@ TERRAFORM := docker run -it \
 		-v `pwd`:/app/ \
 		-v ~/.aws:/root/.aws \
 		--user $(id -u):$(id -g) \
-		-w /app hashicorp/terraform:1.0.0 -chdir=terraform/infra/dev
+		-w /app hashicorp/terraform:1.0.0 -chdir=terraform
 
 .PHONY: build
 build: ## Build the app
