@@ -1,0 +1,112 @@
+{
+    "resource": "/graphql",
+    "path": "/graphql",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-Country": "US",
+        "Host": "dnmy5t8kbg.execute-api.us-east-1.amazonaws.com",
+        "User-Agent": "Thunder Client (https://www.thunderclient.io)",
+        "Via": "1.1 497370ec058751eb0d9251f66d50af5f.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "xGw0UOMnTJjlpQq-nSbj0RGIJY3TsOXsQxN_f7FoOmoNgfd37Vb_RA==",
+        "X-Amzn-Trace-Id": "Root=1-61a1781e-186bf21f7658daa01d75269e",
+        "X-Forwarded-For": "47.42.221.20, 15.158.0.72",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "content-type": "application/json"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-Country": [
+            "US"
+        ],
+        "Host": [
+            "dnmy5t8kbg.execute-api.us-east-1.amazonaws.com"
+        ],
+        "User-Agent": [
+            "Thunder Client (https://www.thunderclient.io)"
+        ],
+        "Via": [
+            "1.1 497370ec058751eb0d9251f66d50af5f.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "xGw0UOMnTJjlpQq-nSbj0RGIJY3TsOXsQxN_f7FoOmoNgfd37Vb_RA=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-61a1781e-186bf21f7658daa01d75269e"
+        ],
+        "X-Forwarded-For": [
+            "47.42.221.20, 15.158.0.72"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ],
+        "content-type": [
+            "application/json"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "accountId": "803551335240",
+        "resourceId": "ceavp5",
+        "stage": "dev",
+        "domainName": "dnmy5t8kbg.execute-api.us-east-1.amazonaws.com",
+        "domainPrefix": "dnmy5t8kbg",
+        "requestId": "30022cd9-72ac-48a1-be40-f3ac6732ddf8",
+        "protocol": "HTTP/1.1",
+        "identity": {
+            "cognitoIdentityPoolId": "",
+            "accountId": "",
+            "cognitoIdentityId": "",
+            "caller": "",
+            "apiKey": "",
+            "apiKeyId": "",
+            "accessKey": "",
+            "sourceIp": "47.42.221.20",
+            "cognitoAuthenticationType": "",
+            "cognitoAuthenticationProvider": "",
+            "userArn": "",
+            "userAgent": "Thunder Client (https://www.thunderclient.io)",
+            "user": ""
+        },
+        "resourcePath": "/graphql",
+        "authorizer": null,
+        "httpMethod": "POST",
+        "requestTime": "27/Nov/2021:00:13:18 +0000",
+        "requestTimeEpoch": 1637971998049,
+        "apiId": "dnmy5t8kbg"
+    },
+    "body": "{\n    \"test3\": \"test3\"\n}"
+}

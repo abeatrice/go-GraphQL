@@ -22,6 +22,12 @@ build: ## Build the app
 run: ## Run the app
 	docker-compose up
 
+.PHONY: invoke
+invoke: ## invoke the function with a payload by passing EVENT=events/event.json
+	docker run --rm \
+	-v `pwd`:/var/task:ro,delegated \
+	lambci/lambda:go1.x main ${EVENT}
+
 .PHONY: init
 init: ## Terraform init
 	$(TERRAFORM) init

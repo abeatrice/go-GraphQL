@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 
 	"github.com/aws/aws-lambda-go/events"
@@ -13,13 +14,11 @@ func main() {
 }
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	fmt.Printf("Processing request data for request %s.\n", request.RequestContext.RequestID)
-	fmt.Printf("Body size = %d.\n", len(request.Body))
-
-	fmt.Println("Headers:")
-	for key, value := range request.Headers {
-		fmt.Printf("    %s: %s\n", key, value)
-	}
-
-	return events.APIGatewayProxyResponse{Body: request.Body, StatusCode: 200}, nil
+	fmt.Printf("Event: \n")
+	jsonRequest, _ := json.Marshal(request)
+	fmt.Printf("%s", string(jsonRequest))
+	return events.APIGatewayProxyResponse{
+		Body:       request.Body,
+		StatusCode: 200,
+	}, nil
 }

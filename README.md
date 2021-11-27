@@ -17,4 +17,23 @@ $ make apply
 ```
 
 ### todo
+ - ./build.sh build main before zip for lambda
+ - set up make invoke to use events/event.json
  - use local enpoints for terraform backend to point to localstack.
+ - attach AWSLambdaBasicExecutionRole to lambda
+ ```
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                ],
+                "Resource": "*"
+            }
+        ]
+    }
+```
