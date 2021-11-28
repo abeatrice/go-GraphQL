@@ -25,7 +25,7 @@ run: ## Run the app
 EVENT := $(shell cat ${ARGS})
 
 .PHONY: invoke
-invoke: ## invoke the function with a payload by passing ARGS=events/event.json
+invoke: ## invoke the function with a payload by passing ARGS=events/event
 	docker run --rm \
 	-v `pwd`:/var/task:ro,delegated \
 	lambci/lambda:go1.x main ${EVENT}

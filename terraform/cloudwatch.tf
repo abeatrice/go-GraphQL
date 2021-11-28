@@ -1,7 +1,3 @@
-resource "aws_cloudwatch_log_group" "log_group" {
-  name = "/aws/lambda/graphql"
-  retention_in_days = 14
-}
 
 resource "aws_iam_policy" "log_policy" {
   name = "graphql_logging"

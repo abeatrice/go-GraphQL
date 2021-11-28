@@ -14,9 +14,9 @@ func main() {
 }
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	fmt.Printf("Event: \n")
+	fmt.Println("Event:")
 	jsonRequest, _ := json.Marshal(request)
-	fmt.Printf("%s", string(jsonRequest))
+	fmt.Println(string(jsonRequest))
 	return events.APIGatewayProxyResponse{
 		Body:       request.Body,
 		StatusCode: 200,

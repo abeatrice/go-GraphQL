@@ -1,4 +1,4 @@
-{
+'{
 	"resource": "/graphql",
 	"path": "/graphql",
 	"httpMethod": "POST",
@@ -109,4 +109,4 @@
 		"apiId": "dnmy5t8kbg"
 	},
 	"body": "{\"test3\":\"test3\"}"
-}
+}'
